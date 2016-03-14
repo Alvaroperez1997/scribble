@@ -97,4 +97,49 @@ public class DrawDemo
             pen.turn(-120);
         }
     }
+    
+    /**
+     * Dibuja un pentagono verde
+     */
+    public void drawPentagon(int x, int y){
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i=0; i<5; i++) {
+            pen.move(100);
+            pen.turn(-72);
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     * Dibuja un pligono regular
+     */
+    public void drawPolygon(int n){
+        Pen pen = new Pen(150, 150, myCanvas);
+        pen.setColor(Color.RED);
+        int angulo = (n-2)*180/n;
+        for (int i=0; i<n; i++) {
+            pen.turn(angulo);
+            pen.move(100);
+        }
+    }
 }
