@@ -122,4 +122,18 @@ public class DrawDemo
             pen.turn(-angulo);
         }
     }
+    
+    /**
+     * Dibuja una espiral cuadrada
+     */
+    public void drawSpiral(){
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+        int lado = 5;
+        for (int i=0; i<200; i++) {
+            lado = lado + 5;
+            pen.move(lado);
+            pen.turn(90);
+        }
+    }
 }
