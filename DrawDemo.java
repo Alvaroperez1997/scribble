@@ -85,4 +85,16 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+    
+    /**
+     * Dibuja un triangulo pasandole las coordenadas por parametro
+     */
+    public void drawTriangle(int x, int y){
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        for (int i=0; i<3; i++) {
+            pen.move(100);
+            pen.turn(-120);
+        }
+    }
 }
