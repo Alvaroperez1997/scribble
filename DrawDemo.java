@@ -110,36 +110,16 @@ public class DrawDemo
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     * Dibuja un pligono regular
+     * Dibuja un poligono regular
      */
     public void drawPolygon(int n){
-        Pen pen = new Pen(150, 150, myCanvas);
+        Pen pen = new Pen(180, 280, myCanvas);
         pen.setColor(Color.RED);
-        int angulo = (n-2)*180/n;
+        int angulo = 360/n;
         for (int i=0; i<n; i++) {
-            pen.turn(angulo);
             pen.move(100);
+            pen.turn(-angulo);
         }
     }
 }
